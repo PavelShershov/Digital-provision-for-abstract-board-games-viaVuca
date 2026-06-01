@@ -1,0 +1,31 @@
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Логи
+*.log
+
+# Настройки редакторов
+.vscode/
+.idea/
+
+# Node.js, если позже появится сборка
+node_modules/
+
+# Переменные окружения и секреты
+.env
+.env.local
+
+# Реальные настройки backend
+backend/config/config.php
+
+# Дампы базы данных с реальными данными
+backend/database/*.dump.sql
+backend/database/*real*.sql
+
+# Временные архивы и резервные копии
+*.zip
+*.rar
+*.7z
+*_backup/
+backup/

@@ -1,0 +1,17 @@
+{
+    "gameId": "fanorona",
+    "gameName": "Фанорона",
+    "taskFiles": [
+        "tasks/fan_task1.js",
+        "tasks/fan_task2.js",
+        "tasks/fan_task3.js"
+    ],
+    "cellsCount": 45,
+    "images": {
+        "board": "assets/pole.png",
+        "pieces": {
+            "yellow": "assets/pieces/org.png",
+            "red": "assets/pieces/red.png"
+        }
+    }
+}

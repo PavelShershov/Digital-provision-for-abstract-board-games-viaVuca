@@ -1,0 +1,19 @@
+{
+    "gameId": "alquerque",
+    "gameName": "Алькерк",
+    "taskFiles": [
+        "tasks/task1.js",
+        "tasks/task2.js",
+        "tasks/task3.js",
+        "tasks/task4.js",
+        "tasks/task5.js"
+    ],
+    "cellsCount": 25,
+    "images": {
+        "board": "assets/pole.png",
+        "pieces": {
+            "red": "assets/pieces/red.png",
+            "green": "assets/pieces/green.png"
+        }
+    }
+}

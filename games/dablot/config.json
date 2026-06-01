@@ -1,0 +1,18 @@
+{
+    "gameId": "dablot",
+    "gameName": "Даблот",
+    "taskFiles": [
+        "tasks/dabl_task1.js",
+        "tasks/dabl_task2.js"
+    ],
+    "cellsCount": 41,
+    "images": {
+        "board": "assets/pole.png",
+        "pieces": {
+            "red": "assets/pieces/red.png",
+            "blue": "assets/pieces/blue.png",
+            "red_king": "assets/pieces/kingr.png",
+            "blue_king": "assets/pieces/kingbl.png"
+        }
+    }
+}

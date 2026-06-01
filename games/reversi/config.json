@@ -1,0 +1,20 @@
+{
+    "gameId": "reversi",
+    "gameName": "Реверси",
+    "taskFiles": [
+        "tasks/rev_task1.js",
+        "tasks/rev_task2.js"
+    ],
+    "cellsCount": 64,
+    "images": {
+        "board": "assets/pole.png",
+        "pieces": {
+            "purple": "assets/pieces/prepl.png",
+            "green": "assets/pieces/gree.png"
+        }
+    },
+    "boardSize": {
+        "rows": 8,
+        "cols": 8
+    }
+}

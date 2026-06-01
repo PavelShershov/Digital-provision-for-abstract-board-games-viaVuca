@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>AR-сканер</title>
+<script src="js/vendor/aframe.min.js"></script>
+<script src="js/vendor/mindar-image-aframe.prod.js"></script>
+<script src="js/vendor/aframe-extras.min.js"></script>
+<link href="css/pages/ar-camera.css" rel="stylesheet"/>
+
+<script src="js/pages/ar-camera-controller.js"></script></head>
+<body>
+<button class="control-btn" id="resetBtn">✕</button>
+<button class="control-btn" id="fullscreenBtn">⛶</button>
+<button class="control-btn" disabled="" id="rewindBtn">⏪</button>
+<button class="control-btn" disabled="" id="controlBtn">▶</button>
+<button class="control-btn" disabled="" id="forwardBtn">⏩</button>
+<div id="progress-container">
+<span id="progress-text">Загрузка модели 0%</span>
+<div id="progress-bar"></div>
+</div>
+<a-scene device-orientation-permission-ui="enabled:false" mindar-image="imageTargetSrc:assets/markers/targets.mind; autoStart:true; uiLoading:false; uiScanning:false; uiError:false; warmupTolerance:1; missTolerance:1; filterMinCF:0.001; filterBeta:1500; maxTrack:1;" vr-mode-ui="enabled:false">
+<a-assets></a-assets>
+<a-camera look-controls="enabled:false" position="0 0 0"></a-camera>
+</a-scene>
+
+<script src="js/pages/ar-camera-ui.js"></script></body>
+</html>

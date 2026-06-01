@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>viaVuca · Создание турнира</title>
+<link href="css/pages/organizer_setup.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="page-wrapper">
+<div class="setup-card" id="setupCard">
+<div class="loader">Загрузка...</div>
+</div>
+<div id="resultContainer">
+<div class="result-title">✅ Тест создан!</div>
+<div class="report" id="reportBlock"></div>
+<label style="font-size:0.8rem; color:#5a6e7c; font-weight:600;">Ссылка для учеников:</label>
+<div class="link-row">
+<input class="result-link" id="generatedLink" readonly="" type="text"/>
+<button class="copy-btn" id="copyLinkBtn" title="Скопировать ссылку">
+<svg fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="17" xmlns="http://www.w3.org/2000/svg">
+<rect height="13" rx="2" ry="2" width="13" x="9" y="9"></rect>
+<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+</svg>
+</button>
+</div>
+<p class="result-hint">Отправьте ссылку ученикам. Тест будет доступен по этой ссылке.</p>
+<div class="result-actions">
+<button class="result-action-btn btn-edit" id="editLinkBtn">✏️ Изменить</button>
+<button class="result-action-btn btn-delete" id="deleteLinkBtn">🗑️ Удалить</button>
+<button class="result-action-btn btn-linkslist" id="toLinksListBtn">📋 В список ссылок</button>
+<button class="result-action-btn btn-menu" id="toMenuBtn">🏠 В меню</button>
+</div>
+</div>
+</div>
+<div class="toast" id="toast">Ссылка скопирована</div>
+<div aria-hidden="true" class="confirm-modal-overlay" id="deleteConfirmModal">
+<div aria-labelledby="deleteConfirmTitle" aria-modal="true" class="confirm-modal" role="dialog">
+<div class="confirm-modal-head">
+<div class="confirm-modal-title" id="deleteConfirmTitle">Удаление турнира</div>
+<button aria-label="Закрыть" class="confirm-modal-close" id="deleteModalCloseBtn" type="button">×</button>
+</div>
+<div class="confirm-modal-text">
+            Вы действительно хотите удалить все данные об этом турнире?
+        </div>
+<div class="confirm-modal-warning">
+            Будет удалена строка турнира из списка ссылок и таблица турнира на Google Диске. Это действие нельзя отменить через интерфейс платформы.
+        </div>
+<label class="confirm-checkbox-row">
+<input id="deleteConfirmCheckbox" type="checkbox"/>
+<span>Я понимаю, что данные об этом турнире будут удалены.</span>
+</label>
+<div class="confirm-modal-actions">
+<button class="confirm-action-btn confirm-cancel-btn" id="deleteCancelBtn" type="button">Отмена</button>
+<button class="confirm-action-btn confirm-delete-btn" disabled="" id="deleteConfirmBtn" type="button">Удалить турнир</button>
+</div>
+</div>
+</div>
+<script src="js/cloud.js?v=7"></script>
+<script src="js/pages/organizer_setup.js"></script>
+</body>
+</html>

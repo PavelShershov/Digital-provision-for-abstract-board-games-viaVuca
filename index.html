@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>viaVUCA · Выбор игры</title>
+
+<link href="css/pages/index.css" rel="stylesheet"/>
+<script src="js/pages/index-start.js"></script><script defer="" src="js/shared/page-scroll.js"></script><script defer="" src="js/shared/particles.js"></script><script defer="" src="js/shared/navigation.js"></script><script defer="" src="js/pages/index.js"></script></head>
+<body class="mode-train">
+<div aria-hidden="true" class="sticky-mode-switch" id="stickyModeSwitch">
+<button class="sticky-mode-btn active" id="stickyTrainModeBtn" type="button">🧠 Тренировка</button>
+<button class="sticky-mode-btn" id="stickyTestModeBtn" type="button">📋 Тестирование</button>
+</div>
+
+<main class="page-shell">
+<section class="main-card">
+<div class="side-back">
+<button class="back-button" id="backButton">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<polyline points="15 18 9 12 15 6"></polyline>
+</svg>
+<span>На главную</span>
+</button>
+</div>
+<div class="mobile-burger-menu" id="mobileBurgerMenu">
+<button aria-expanded="false" aria-label="Открыть меню" class="burger-button" id="burgerMenuBtn" type="button">
+<span aria-hidden="true" class="burger-lines">
+<span></span>
+<span></span>
+<span></span>
+</span>
+</button>
+<div aria-label="Меню разделов" class="mobile-menu-dropdown" id="mobileMenuDropdown">
+<button class="mobile-menu-item" id="mobileArRulesBtn" type="button">
+<span class="mobile-menu-item-icon">🕶️</span>
+<span>AR-правила</span>
+</button>
+<button class="mobile-menu-item" id="mobilePublisherSiteBtn" type="button">
+<span class="mobile-menu-item-icon">🌐</span>
+<span>Сайт издательства</span>
+</button>
+</div>
+</div>
+<header class="header">
+<div class="header-left">
+<h1>Выберите игру и режим</h1>
+<p class="header-text">
+                    Тренируйтесь в свободном режиме или сгенерруйте своё тестирование по абстрактным настольным играм viaVUCA.
+                </p>
+</div>
+<aside class="mode-panel">
+<div class="mode-buttons">
+<button class="mode-btn active" id="trainModeBtn">
+<div class="mode-main">🧠 Тренировка</div>
+<div class="mode-desc">Решайте любые задачи в своём темпе.</div>
+</button>
+<button class="mode-btn" id="testModeBtn">
+<div class="mode-main">📋 Тестирование</div>
+<div class="mode-desc">Настройте задания для проверки знаний.</div>
+</button>
+</div>
+</aside>
+</header>
+<div class="current-mode-strip">
+<div class="mode-description" id="modeDescription">
+                🧠 Решайте любые задачи в своём темпе
+            </div>
+</div>
+<div class="games-grid" id="gamesGrid"></div>
+<div aria-label="Листание карусели игр" class="games-carousel-controls" id="gamesCarouselControls">
+<button aria-label="Предыдущая страница" class="games-carousel-arrow" id="gamesCarouselPrevBtn" type="button">‹</button>
+<div aria-label="Переключение страниц игр" class="games-carousel-dots" id="gamesCarouselDots"></div>
+<button aria-label="Следующая страница" class="games-carousel-arrow" id="gamesCarouselNextBtn" type="button">›</button>
+</div>
+</section>
+<div class="info-message" id="infoMessage"></div>
+<footer class="footer-note">
+        © 2026 viaVUCA® · Издательство настольных игр компании «Полюс-НТ»
+    </footer>
+</main>
+
+</body>
+</html>

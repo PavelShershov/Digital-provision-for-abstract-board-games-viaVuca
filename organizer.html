@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>viaVUCA · Создание турнира</title>
+<link href="css/pages/organizer.css" rel="stylesheet"/>
+<script src="js/cloud.js?v=7"></script>
+<script defer="" src="js/shared/particles.js"></script><script defer="" src="js/shared/navigation.js"></script><script defer="" src="js/pages/organizer.js"></script></head>
+<body>
+
+<main class="page-shell">
+<div class="top-bar">
+<div class="top-bar-left">
+<button class="back-button" id="backButton">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<polyline points="15 18 9 12 15 6"></polyline>
+</svg>
+<span>Назад</span>
+</button>
+</div>
+<div class="top-bar-right">
+<button class="organizer-pill organizer-links-pill" id="organizerLinksPill" type="button">📋 Турнирные ссылки</button>
+<div class="profile-menu" id="profileMenu">
+<button aria-label="Меню профиля" class="profile-button" id="profileButton" type="button">
+<span class="profile-avatar" id="profileAvatar">👤</span>
+</button>
+<div class="profile-dropdown" id="profileDropdown">
+<div class="profile-head">
+<div class="profile-name" id="profileName">Организатор</div>
+<div class="profile-login" id="profileLogin">Загрузка...</div>
+</div>
+<button class="profile-menu-item" id="tournamentLinksBtn" type="button">
+                        📋 Турнирные ссылки
+                    </button>
+<button class="profile-menu-item logout" id="logoutBtn" type="button">
+                        🚪 Выйти
+                    </button>
+</div>
+</div>
+</div>
+</div>
+<section class="main-layout">
+<div class="side-column">
+<aside class="organizer-panel">
+<img alt="viaVUCA" class="logo" src="assets/logo/logo.svg"/>
+<div class="organizer-content">
+<h1>Создание турнира</h1>
+<p class="lead-text">
+                        Выберите игру, настройте состав заданий и подготовьте тест
+                        для участников турнира.
+                    </p>
+</div>
+<div class="quick-info">
+<div class="info-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<div class="info-title">Выбор игры</div>
+<div class="info-desc">Откройте настройку теста для нужной игры.</div>
+</div>
+</div>
+<div class="info-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<div class="info-title">Состав заданий</div>
+<div class="info-desc">Укажите типы и количество задач.</div>
+</div>
+</div>
+<div class="info-step">
+<div class="step-number">3</div>
+<div class="step-content">
+<div class="info-title">Турнирный код</div>
+<div class="info-desc">После создания участники смогут пройти тест по коду.</div>
+</div>
+</div>
+</div>
+</aside>
+<section class="support-panel">
+<div class="support-title">
+                    Нашли ошибку или столкнулись со сбоем?
+                </div>
+<div class="support-text">
+                    Напишите нам на почту, и мы постараемся помочь:
+                    <a class="support-email" href="mailto:info@viavuca.com">info@viavuca.com</a>
+</div>
+</section>
+</div>
+<section class="games-panel">
+<div class="panel-header">
+<div>
+<div class="panel-title">Игры для соревнования</div>
+<div class="panel-subtitle">Выберите доступную игру или сборный тест.</div>
+</div>
+<div class="games-counter" id="gamesCounter">0 доступно</div>
+</div>
+<div class="games-grid" id="gamesGrid"></div>
+</section>
+</section>
+<div class="info-message" id="infoMessage"></div>
+<footer class="footer-note">
+        © 2026 viaVUCA® · Организатор турниров
+    </footer>
+</main>
+
+</body>
+</html>

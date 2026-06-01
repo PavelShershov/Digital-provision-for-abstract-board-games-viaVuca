@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title id="pageTitle">Тактический тренажёр</title>
+<link href="css/pages/game.css" rel="stylesheet"/>
+<script defer="" src="js/shared/particles.js"></script><script defer="" src="js/pages/game.js"></script></head>
+<body>
+
+<div class="game-card">
+<div class="back-button" id="backButton">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<polyline points="15 18 9 12 15 6"></polyline>
+</svg>
+<span>Назад</span>
+</div>
+<h1 id="gameTitle">Загрузка...</h1>
+<div class="sub">выберите тип задачи</div>
+<select class="task-select" id="taskSelect"></select>
+<div class="question" id="question">Загрузка задачи…</div>
+<div class="board-wrapper" id="boardWrapper">
+<canvas id="boardCanvas"></canvas>
+<div class="result" id="result">
+<div class="result-summary">
+<span id="resultMessage"></span>
+<span class="result-toggle" id="resultArrow">▼</span>
+</div>
+</div>
+<div class="toggle-numbers-btn" id="toggleNumbersBtn">👁️</div>
+</div>
+<div class="result-expand-panel" id="resultExpandPanel"></div>
+<div class="desktop-explanation-panel" id="desktopExplanationPanel"></div>
+<div class="desktop-explanation-connector" id="desktopExplanationConnector"></div>
+<div class="instruction-under-canvas">Нажми на поле → Рисуй и приближай</div>
+<div class="options" id="optionsContainer"></div>
+<div class="action-bar">
+<button class="btn-check" id="checkBtn">✓ Проверить</button>
+<button class="btn-new" id="newBtn">⟳ Новая задача</button>
+</div>
+<div class="footer-note">Выбери вариант(ы) ответа → нажми «Проверить»</div>
+</div>
+<div class="modal" id="imageModal">
+<span class="close-modal" id="closeModalBtn">×</span>
+<div class="zoom-container" id="zoomContainer">
+<div class="image-stage" id="imageStage">
+<img alt="Увеличенное изображение поля" class="modal-content" id="modalImage"/>
+<canvas class="draw-layer" id="drawCanvas"></canvas>
+</div>
+</div>
+<div class="toolbar-main">
+<button class="zoom-btn" id="clearDrawBtn" title="Очистить рисунок">🗑️</button>
+<button class="zoom-btn" id="zoomOutBtn" title="Уменьшить">−</button>
+<button class="zoom-btn" id="zoomInBtn" title="Увеличить">+</button>
+<div class="color-indicator" id="colorIndicator" style="background-color: #ffffff;" title="Цвет кисти"></div>
+</div>
+<div class="draw-tools-panel" id="drawToolsPanel">
+<div class="draw-panel-title">Настройки рисования</div>
+<div class="color-palette" id="colorPalette">
+<div class="color-circle" data-color="#ffffff" style="background-color: #ffffff;"></div>
+<div class="color-circle" data-color="#ff0000" style="background-color: #ff0000;"></div>
+<div class="color-circle" data-color="#00ff00" style="background-color: #00ff00;"></div>
+<div class="color-circle" data-color="#0000ff" style="background-color: #0000ff;"></div>
+<div class="color-circle" data-color="#ffff00" style="background-color: #ffff00;"></div>
+<div class="color-circle" data-color="#ff8800" style="background-color: #ff8800;"></div>
+<div class="color-circle" data-color="#ff00ff" style="background-color: #ff00ff;"></div>
+</div>
+<div class="brush-slider-container">
+<div class="slider-caption">Толщина линии</div>
+<div class="slider-track" id="sliderTrack">
+<div class="slider-marks">
+<div class="slider-mark" style="left: 0%"></div>
+<div class="slider-mark" style="left: 25%"></div>
+<div class="slider-mark" style="left: 50%"></div>
+<div class="slider-mark" style="left: 75%"></div>
+<div class="slider-mark" style="left: 100%"></div>
+</div>
+<div class="slider-thumb" id="sliderThumb" style="left: 25%;"></div>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

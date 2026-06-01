@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>Вход · viaVuca</title>
+<link href="css/pages/organizer_login.css" rel="stylesheet"/>
+<script src="js/cloud.js?v=11"></script>
+</head>
+<body>
+<div class="login-container">
+<div class="login-header">
+<img alt="viaVuca" class="logo" src="assets/logo/logo.svg"/>
+<h1>Вход организатора</h1>
+<div class="mode-switch">
+<button class="mode-btn active" data-mode="password">🔐 По паролю</button>
+<button class="mode-btn" data-mode="code">📧 По коду из почты</button>
+</div>
+</div>
+
+<div class="login-form" id="password-form">
+<div class="input-group">
+<label>Логин</label>
+<input autocomplete="username" id="login" name="username" placeholder="Введите логин" type="text"/>
+</div>
+<div class="input-group">
+<label>Пароль</label>
+<div class="password-wrapper">
+<input autocomplete="current-password" id="password" name="password" placeholder="Введите пароль" type="password"/>
+<button aria-label="Показать пароль" class="password-toggle" id="password-toggle" type="button">
+                    👁️
+                </button>
+</div>
+</div>
+<label class="remember-row">
+<input id="rememberMe" type="checkbox"/>
+<span>Запомнить меня</span>
+</label>
+<button id="password-submit" type="submit">Войти</button>
+<div class="message" id="password-message" style="display: none;"></div>
+</div>
+
+<div class="login-form" id="code-form" style="display: none;">
+<div id="email-step">
+<div class="input-group">
+<label>Email организатора</label>
+<input autocomplete="email" id="email" placeholder="example@school.ru" type="email"/>
+</div>
+<button id="send-code-btn" type="submit">Отправить код</button>
+<div class="message" id="email-message" style="display: none;"></div>
+</div>
+<div id="code-step" style="display: none;">
+<div class="input-group">
+<label>Код подтверждения</label>
+<input autocomplete="one-time-code" id="verification-code" inputmode="numeric" maxlength="6" placeholder="6-значный код" type="text"/>
+</div>
+<button id="verify-code-btn" type="submit">Подтвердить и войти</button>
+<div class="message" id="code-message" style="display: none;"></div>
+<div class="secondary-action" id="resend-area">
+<span class="timer" id="resend-timer"></span>
+<button class="resend-link" id="resend-code-btn" style="display: none;" type="button">
+                    Отправить код повторно
+                </button>
+</div>
+</div>
+</div>
+<div class="bottom-link-wrap">
+<a class="bottom-back-link" href="welcome.html" id="top-back-link">← На главную</a>
+</div>
+</div>
+<script src="js/pages/organizer_login.js"></script>
+</body>
+</html>

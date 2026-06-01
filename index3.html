@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>viaVUCA · Выбор игры</title>
+<script src="js/vendor/model-viewer.min.js" type="module"></script>
+<link href="css/pages/index3.css" rel="stylesheet"/>
+<script defer="" src="js/shared/page-scroll.js"></script><script defer="" src="js/shared/particles.js"></script><script defer="" src="js/shared/navigation.js"></script><script defer="" src="js/pages/index3.js"></script></head>
+<body>
+
+<main class="page-shell">
+<section class="main-card">
+<div class="topbar">
+<button class="back-button" id="mainBackBtn" type="button">← На главную</button>
+<div class="topbar-actions">
+<button class="soft-button is-hidden" id="backToGamesBtn" type="button">← К выбору игр</button>
+<button class="theme-toggle" id="themeToggleBtn" type="button">🌙 Тёмная тема</button>
+<div class="mobile-burger-menu" id="mobileBurgerMenu">
+<button aria-expanded="false" aria-label="Открыть меню" class="burger-button" id="burgerMenuBtn" type="button">
+<span aria-hidden="true" class="burger-lines">
+<span></span>
+<span></span>
+<span></span>
+</span>
+</button>
+<div aria-label="Меню разделов" class="mobile-menu-dropdown" id="mobileMenuDropdown">
+<button class="mobile-menu-item" id="mobileTrainerBtn" type="button">
+<span class="mobile-menu-item-icon">🧠</span>
+<span>Тренажёр</span>
+</button>
+<button class="mobile-menu-item" id="mobilePublisherSiteBtn" type="button">
+<span class="mobile-menu-item-icon">🌐</span>
+<span>Сайт издательства</span>
+</button>
+<button class="mobile-menu-item" id="mobileThemeBtn" type="button">
+<span class="mobile-menu-item-icon" id="mobileThemeIcon">🌙</span>
+<span id="mobileThemeLabel">Тёмная тема</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<header class="header" id="pageHeader">
+<h1 id="pageTitle">Выберите игру</h1>
+<p class="header-text" id="pageLead">
+        Сначала выберите настольную игру, а затем откройте большой 3D-плеер с анимацией партии,
+        тайм-кодами, перемоткой и AR-просмотром.
+      </p>
+</header>
+<section class="screen active" id="selectScreen">
+<div class="select-panel">
+<div class="mobile-ar-entry" id="mobileArEntry">
+<button class="mobile-ar-camera-btn" id="mobileCameraBtn" type="button">
+<span class="mobile-ar-icon">📷</span>
+<span class="mobile-ar-text">
+<strong>Открыть AR-камеру</strong>
+<small>На телефоне откроется камера, на ПК появится QR-код</small>
+</span>
+<span class="mobile-ar-arrow">→</span>
+</button>
+</div>
+<div class="selector-grid" id="selectorGrid"></div>
+<div aria-label="Листание карусели игр" class="games-carousel-controls" id="gamesCarouselControls">
+<button aria-label="Предыдущая страница" class="games-carousel-arrow" id="gamesCarouselPrevBtn" type="button">‹</button>
+<div aria-label="Переключение страниц игр" class="games-carousel-dots" id="gamesCarouselDots"></div>
+<button aria-label="Следующая страница" class="games-carousel-arrow" id="gamesCarouselNextBtn" type="button">›</button>
+</div>
+</div>
+</section>
+<section class="screen" id="playerScreen">
+<div class="player-panel" id="playerPanel">
+<div class="player-head">
+<div class="player-title-block">
+<div class="player-kicker">3D-плеер выбранной игры</div>
+<div class="player-title" id="activeGameTitle">Игра</div>
+<div class="player-desc" id="activeGameDesc">Описание игры.</div>
+</div>
+<button class="soft-button" id="chooseAnotherBtn" type="button">Выбрать другую игру</button>
+</div>
+<div class="player-layout">
+<div class="viewer-card">
+<div class="viewer-box" id="viewerBox">
+<div class="viewer-watermark" id="viewerWatermark">viaVUCA · 3D</div>
+<button class="ar-button" id="arBtn" type="button">▣ Смотреть в AR</button>
+<button aria-label="Сбросить вид" class="viewer-reset-btn" id="resetViewBtn" title="Сбросить вид" type="button">↺</button>
+<button aria-label="Полноэкранный режим" class="viewer-fullscreen-btn" id="fullscreenBtn" title="Полноэкранный режим" type="button">⛶</button>
+<button aria-expanded="false" aria-label="Открыть тайм-коды" class="viewer-chapters-toggle" id="viewerChaptersToggle" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<div aria-hidden="true" class="viewer-chapters-panel" id="viewerChaptersPanel">
+<div class="viewer-chapters-mini-list" id="viewerChaptersMiniList"></div>
+</div>
+<div class="viewer-placeholder" id="viewerPlaceholder">Выбранная 3D-модель загружается…</div>
+<div class="viewer-error" id="viewerError"></div>
+<model-viewer ar="" ar-modes="scene-viewer webxr quick-look" ar-placement="floor" ar-scale="fixed" autoplay="" camera-controls="" camera-orbit="0deg 65deg auto" environment-image="neutral" exposure="1" field-of-view="30deg" id="mainViewer" interaction-prompt="none" loading="eager" max-camera-orbit="auto 88deg auto" min-camera-orbit="auto 0deg auto" reveal="auto" shadow-intensity="0.9" touch-action="pan-y" xr-environment="">
+</model-viewer>
+</div>
+<div class="controls-panel">
+<div class="timeline-row">
+<span class="time-label" id="currentTimeLabel">00:00</span>
+<input aria-label="Таймлайн анимации" class="timeline" id="timelineInput" max="1000" min="0" step="1" type="range" value="0"/>
+<span class="time-label" id="durationLabel">00:00</span>
+</div>
+<div class="control-grid">
+<button class="player-btn play-btn" id="playPauseBtn" type="button">⏸ Пауза</button>
+<button aria-label="Назад на 5 секунд" class="player-btn" id="rewindBtn" type="button"></button>
+<button aria-label="Вперёд на 5 секунд" class="player-btn" id="forwardBtn" type="button"></button>
+<button aria-label="Зацикливание включено" class="player-btn loop-toggle-btn active-loop" id="loopToggleBtn" title="Зацикливание включено" type="button"></button>
+<select aria-label="Скорость анимации" class="speed-select" id="speedSelect">
+<option value="0.5">0.5×</option>
+<option selected="" value="1">1×</option>
+<option value="1.5">1.5×</option>
+<option value="2">2×</option>
+</select>
+</div>
+</div>
+</div>
+<aside class="chapters-card">
+<div class="chapters-title">
+<span>Тайм-коды</span>
+</div>
+<div class="chapters-list" id="chaptersList"></div>
+</aside>
+</div>
+</div>
+</section>
+</section>
+<footer class="footer-note">
+    © 2026 viaVUCA® · Издательство настольных игр компании «Полюс-НТ»
+  </footer>
+</main>
+<div class="toast" id="toast"></div>
+
+<div aria-hidden="true" class="qr-modal" id="desktopQrModal">
+<div class="qr-modal-backdrop" data-qr-close=""></div>
+<section aria-describedby="qrModalText" aria-labelledby="qrModalTitle" aria-modal="true" class="qr-dialog" role="dialog">
+<button aria-label="Закрыть" class="qr-close-btn" id="qrCloseBtn" type="button">×</button>
+<div class="qr-dialog-icon">📷</div>
+<h2 id="qrModalTitle">Откройте AR-камеру на смартфоне или планшете</h2>
+<p class="qr-dialog-text" id="qrModalText">
+      Режим AR-камеры работает на мобильном устройстве с камерой. Отсканируйте QR-код, чтобы перейти к AR-сканеру.
+    </p>
+<div class="qr-code-box">
+<img alt="QR-код для перехода в AR-камеру" id="qrCodeImg"/>
+</div>
+<a class="qr-direct-link" href="#" id="qrDirectLink" rel="noopener" target="_blank">Открыть ссылку</a>
+<div class="qr-url-text" id="qrUrlText"></div>
+<p class="qr-note" id="qrNote">
+      Если QR-код не открывается, убедитесь, что сайт запущен по HTTPS или через локальный IP-адрес, доступный телефону.
+    </p>
+</section>
+</div>
+</body>
+</html>

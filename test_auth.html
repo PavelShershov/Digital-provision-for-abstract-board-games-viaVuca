@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>Авторизация · viaVuca</title>
+<link href="css/pages/test_auth.css" rel="stylesheet"/>
+<script src="js/cloud.js?v=7"></script>
+</head>
+<body>
+<div class="auth-card">
+<img alt="viaVuca" class="logo" src="assets/logo/logo.svg"/>
+<div class="sub">Введите ваши данные для прохождения теста</div>
+<input autocomplete="name" id="studentName" placeholder="Имя" type="text"/>
+<input autocomplete="email" id="studentEmail" placeholder="Email (для отправки результатов)" type="email"/>
+<button id="startTestBtn">Начать тест</button>
+<div class="error" id="errorMsg"></div>
+<a class="back-link" href="enter_test.html">← Назад</a>
+</div>
+<script src="js/pages/test_auth.js"></script>
+</body>
+</html>

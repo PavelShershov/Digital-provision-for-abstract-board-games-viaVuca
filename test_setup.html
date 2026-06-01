@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>viaVuca · Настройка теста</title>
+<link href="css/pages/test_setup.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="setup-card" id="setupCard">
+<div class="back-button" id="backButton">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<polyline points="15 18 9 12 15 6"></polyline>
+</svg>
+<span>Назад</span>
+</div>
+<div class="loader">Загрузка...</div>
+</div>
+<div class="modal" id="customModal">
+<div class="modal-content">
+<span class="close-modal">×</span>
+<h3>⚙️ Индивидуальный вариант</h3>
+<div id="customTaskList"></div>
+<div class="bottom-links">
+<label class="checkbox-label">
+<input id="shuffleCheckbox" type="checkbox"/> В случайном порядке
+            </label>
+<span class="clickable-link" id="clearAllBtn">✗ Убрать все</span>
+</div>
+<div class="modal-actions">
+<div class="modal-toast" id="modalToast"></div>
+<button class="custom-generate-btn" id="generateCustomBtn">Сгенерировать тест</button>
+</div>
+</div>
+</div>
+<script src="js/pages/test_setup.js"></script>
+</body>
+</html>

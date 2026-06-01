@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>viaVUCA · Турнирные ссылки</title>
+<link href="css/pages/organizer_links.css" rel="stylesheet"/>
+<script src="js/cloud.js?v=14"></script>
+<script defer="" src="js/shared/particles.js"></script><script defer="" src="js/shared/navigation.js"></script><script defer="" src="js/pages/organizer_links.js"></script></head>
+<body>
+
+<main class="page-shell">
+<div class="top-bar">
+<div class="top-bar-left">
+<button class="back-button" id="backButton" type="button">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<polyline points="15 18 9 12 15 6"></polyline>
+</svg>
+<span>Назад</span>
+</button>
+</div>
+<div class="top-bar-right">
+<button class="organizer-pill" id="organizerPanelPill" type="button">🧩 Панель организатора</button>
+<div class="profile-menu" id="profileMenu">
+<button aria-label="Меню профиля" class="profile-button" id="profileButton" type="button">
+<span class="profile-avatar" id="profileAvatar">👤</span>
+</button>
+<div class="profile-dropdown" id="profileDropdown">
+<div class="profile-head">
+<div class="profile-name" id="profileName">Организатор</div>
+<div class="profile-login" id="profileLogin">Загрузка...</div>
+</div>
+<button class="profile-menu-item" id="organizerPanelBtn" type="button">
+                        🧩 Панель организатора
+                    </button>
+<button class="profile-menu-item logout" id="logoutBtn" type="button">
+                        🚪 Выйти
+                    </button>
+</div>
+</div>
+</div>
+</div>
+<section class="main-card">
+<div class="card-content">
+<header class="page-head">
+<div class="page-head-top">
+<h1>Турнирные ссылки</h1>
+<div aria-label="Всего ссылок" class="summary-badge">
+<span class="summary-title">Всего ссылок</span>
+<span class="summary-value" id="totalCount">0</span>
+</div>
+</div>
+<p class="lead-text">
+                    Здесь будут собраны все Ваши ссылки на созданные турниры.
+                </p>
+</header>
+<section class="links-area">
+<div class="links-toolbar">
+<div>
+<div class="links-title" id="linksTitle">Список ссылок</div>
+<div class="links-subtitle" id="linksSubtitle">
+                            Отображаются Ваши созданные турнирные ссылки.
+                        </div>
+</div>
+<button class="refresh-btn" id="refreshBtn" type="button">↻ Обновить</button>
+</div>
+<div class="links-list" id="linksList"></div>
+</section>
+</div>
+</section>
+<footer class="footer-note">
+        © 2026 viaVUCA® · Организатор турниров
+    </footer>
+</main>
+<div class="toast" id="toast">Ссылка скопирована</div>
+<div aria-hidden="true" class="confirm-modal-overlay" id="deleteConfirmModal">
+<div aria-labelledby="deleteConfirmTitle" aria-modal="true" class="confirm-modal" role="dialog">
+<div class="confirm-modal-head">
+<div class="confirm-modal-title" id="deleteConfirmTitle">Удаление турнира</div>
+<button aria-label="Закрыть" class="confirm-modal-close" id="deleteModalCloseBtn" type="button">×</button>
+</div>
+<div class="confirm-modal-text">
+            Вы действительно хотите удалить все данные об этом турнире?
+        </div>
+<div class="confirm-modal-warning">
+            Будет удалена строка турнира из списка ссылок и таблица турнира на Google Диске. Это действие нельзя отменить через интерфейс платформы.
+        </div>
+<label class="confirm-checkbox-row">
+<input id="deleteConfirmCheckbox" type="checkbox"/>
+<span>Я понимаю, что данные об этом турнире будут удалены.</span>
+</label>
+<div class="confirm-modal-actions">
+<button class="confirm-action-btn confirm-cancel-btn" id="deleteCancelBtn" type="button">Отмена</button>
+<button class="confirm-action-btn confirm-delete-btn" disabled="" id="deleteConfirmBtn" type="button">Удалить турнир</button>
+</div>
+</div>
+</div>
+
+</body>
+</html>
